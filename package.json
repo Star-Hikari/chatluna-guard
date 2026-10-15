@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-chatluna-guard",
   "description": "Chatluna用户限额与可选择不回复拓展插件",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,14 +9,41 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "homepage": "https://github.com/Star-Hikari/chatluna-guard#readme",
+  "issues": "https://github.com/Star-Hikari/chatluna-guard/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Star-Hikari/chatluna-guard.git"
+  },
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "chatluna",
+    "guard",
+    "quota",
+    "limit"
   ],
-  "devDependencies": {},
   "peerDependencies": {
-    "koishi": "^4.18.7"
+    "koishi": "^4.18.7",
+    "koishi-plugin-chatluna": "^1.4.0"
+  },
+  "koishi": {
+    "description": {
+      "zh": "ChatLuna 辅助插件：按用户维度的每小时/每天对话配额（支持用户与群聊豁免、权限分级限额），以及选择性不回复能力（规则防刷屏自动闭嘴 + 可选的前置小模型判官）。与主插件并存，互不干扰。",
+      "en": "Companion plugin for ChatLuna: per-user hourly/daily chat quotas with whitelist & group exemptions, authority tiers, and selective non-response (rule-based spam silence + optional judge model)."
+    },
+    "service": {
+      "required": [
+        "database",
+        "chatluna"
+      ],
+      "optional": [
+        "notifier"
+      ]
+    }
+  },
+  "optionalDependencies": {
+    "@koishijs/plugin-notifier": "^1.2.1"
   }
 }
