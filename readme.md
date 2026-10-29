@@ -47,9 +47,9 @@ ChatLuna 辅助插件：按用户维度的对话配额（支持峰谷时段）�
 - 单条消息、实际以合并转发（`isForwardMsg`）发出时**不延迟**
 
 ### ⑥ 发送前图片 / GIF 压缩
-- 静态图：体积 ≥ `minSizeMB`（默认 0.75MB）**或**长边 ≥ `minEdge`（默认 1600）时，
+- 静态图：体积 ≥ `minSizeMB`（默认 2.5MB）**或**长边 ≥ `minEdge`（默认 1920）时，
   缩到 `maxEdge`（默认 1920）并转 JPEG（默认质量 88）
-- GIF：`gifEnabled` 开启且体积 ≥ `gifMinSizeMB`（默认 0.5MB）时自适应处理——
+- GIF：`gifEnabled` 开启且体积 ≥ `gifMinSizeMB`（默认 2.5MB）时自适应处理——
   均匀抽 `gifSampleFrames` 帧算帧差；低于 `gifMotionThreshold`（默认 0.04）只取中间帧，
   高于则拼成 2×2 采样图（每格 `gifCellSize`，默认 512，JPEG `gifQuality`，默认 82），
   并在消息里补一句采样顺序说明
